@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Joanicy Lopes Advocacia | Excelência e Resultados</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#e9c176",
+                    "inverse-surface": "#2f3131",
+                    "surface-bright": "#f9f9f9",
+                    "on-surface-variant": "#4e4639",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#775a19",
+                    "surface-container-low": "#f3f3f4",
+                    "primary": "#775a19",
+                    "tertiary-fixed-dim": "#c9c6c1",
+                    "primary-fixed": "#ffdea5",
+                    "secondary": "#775a19",
+                    "on-primary-container": "#4e3700",
+                    "surface-dim": "#dadada",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#a7a5a0",
+                    "on-secondary-container": "#636262",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-primary-fixed": "#261900",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#5f5e5a",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed": "#1c1c18",
+                    "secondary-fixed": "#e5e2dc",
+                    "primary-fixed-dim": "#e9c176",
+                    "secondary-container": "#e2dfde",
+                    "outline-variant": "#d1c5b4",
+                    "surface-container-high": "#e8e8e8",
+                    "tertiary-fixed": "#e5e2dc",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#474743",
+                    "outline": "#7f7667",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-container": "#3b3b37",
+                    "on-surface": "#1a1c1c",
+                    "background": "#f9f9f9",
+                    "inverse-on-surface": "#f0f1f1",
+                    "primary-container": "#c5a059",
+                    "on-secondary-fixed-variant": "#474746"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "1.5rem",
+                    "section-gap": "8rem",
+                    "gutter": "2rem",
+                    "frame-border-width": "1px",
+                    "margin-page": "4rem",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Libre Caslon Text"],
+                    "body-lg": ["Libre Caslon Text"],
+                    "display-lg-mobile": ["Libre Caslon Text"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "label-caps": ["Montserrat"],
+                    "body-md": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            background-image: url('https://www.transparenttextures.com/patterns/marble-white.png');
+            background-attachment: fixed;
+        }
+        .relief-frame-left {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            border-right: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: inset -5px 0 10px -5px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 100;
+            display: none;
+        }
+        .relief-frame-right {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            border-left: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: inset 5px 0 10px -5px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 100;
+            display: none;
+        }
+        @media (min-width: 1280px) {
+            .relief-frame-left, .relief-frame-right { display: block; }
+        }
+        .text-metallic-gold {
+            background: linear-gradient(to bottom, #d4af37 0%, #c5a059 50%, #8a6d3b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mask-silhouette {
+            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        }
+        .gold-border-subtle { border-color: rgba(197, 160, 89, 0.3); }
+        .bg-white-marble { background-image: url('https://www.transparenttextures.com/patterns/marble-white.png'); }
+
+        /* Infinite Scrolling Marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+
+        /* Pulse Animation for WhatsApp floating button */
+        @keyframes pulse-whatsapp {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
+        .animate-pulse-whatsapp {
+            animation: pulse-whatsapp 2s infinite;
+        }
+    </style>
+</head>
+<body class="text-primary font-body-md overflow-x-hidden">
+    <!-- Relief Frames -->
+    <div class="relief-frame-left"></div>
+    <div class="relief-frame-right"></div>
+
+    <!-- TopNavBar -->
+    <header class="bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 fixed top-0 w-full z-50">
+        <div class="flex justify-between items-center px-margin-page py-4 w-full border-x border-outline-variant/20 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <img alt="Logo Joanicy Lopes" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKMvN-3XowTWQ-O_PqaoVC5wTxCLN64469zIPxukaW5_mAnn6jaNuFCKQwKl_EOj-5TflFt2JysEybPgQiJ2_zdMvKp_3eqKgY1lUps7Ip24hMsOiJkIqePUw_AeMN6tZPnsD2rCqvbUBwholXmUGYQQMmTEZMhg87BtJ8w2LaBVZSuw6CMRfNFSlWYtmAh7yDBcB497dDp4DlfLpXEieCm4VnUpVyEdBv916lqhvE-XUmLc504k7CG7PDzx7Aa04h0Z97lAaAhV8">
+                <span class="font-display-lg text-headline-md text-primary tracking-widest uppercase hidden md:block">Joanicy Lopes</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant hover:text-primary font-label-caps text-label-caps transition-colors duration-300" href="#specialties">Especialidades</a>
+                <a class="text-on-surface-variant hover:text-primary font-label-caps text-label-caps transition-colors duration-300" href="#office">O Escritório</a>
+                <a class="text-on-surface-variant hover:text-primary font-label-caps text-label-caps transition-colors duration-300" href="#team">Equipe</a>
+                <a class="text-on-surface-variant hover:text-primary font-label-caps text-label-caps transition-colors duration-300" href="#contact">Contato</a>
+            </nav>
+            <a href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-none hover:bg-primary-container transition-all duration-300 active:scale-95 uppercase tracking-widest text-center">
+                Agendar Consulta
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <!-- Marble & Statue Background -->
+            <div class="absolute inset-0 z-0">
+                <img alt="Golden Lady Justice" class="w-full h-full object-cover object-center opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATmOPgJqIG_0txSk14qFrAE93p6B9qcYMQj_AQo8FBWgFAqtZ0uVRFu07WhGlqFSIaVBL4VzJ7k4WoJxN1opZrDoX_3VWeorGwlUCAM1lJzjb5mLJofZFJXh0VgileLBGRF8G9dTEoPSFvsdch8uK_3AMA2PefzkY1m1OFi-AtVE8W0F5FNqf0l4qgVs9hXJcgLhODk_sJsGt1nLYSBD2uI9fUZEy4h_V0azET92wl-sVDbRc9tghgeBV-jgAzFf5yRjgBc_bQfPw">
+                <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+            </div>
+            <div class="relative z-20 w-full px-6 md:px-margin-page max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-block px-4 py-1 border-l-2 border-primary mb-6">
+                        <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Joanicy Lopes Advocacia</span>
+                    </div>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                        Advocacia de <span class="italic text-metallic-gold">Excelência</span> e Resultados
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        Soluções jurídicas estratégicas nas áreas Criminal, Cível, Divórcio e atuação destacada no Tribunal do Júri. Protegendo seus interesses com rigor técnico, ética e inovação.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 uppercase tracking-widest hover:bg-primary-container transition-all duration-500 shadow-xl shadow-primary/10 text-center">
+                            Consultar Agora
+                        </a>
+                        <a href="#office" class="text-primary font-label-caps text-label-caps flex items-center justify-center sm:justify-start gap-3 group">
+                            <span class="w-12 h-[1px] bg-primary group-hover:w-16 transition-all duration-300"></span>
+                            Conheça o Escritório
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative flex justify-center items-end self-end h-full">
+                    <img alt="Joanicy Lopes" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWC6WwT4elH-rg-3uJGS4EtBJtlRy7tAXyRu4CLlp-T4qVUEFdHsBgJlXlbGNhrimNpR2l8b5ZXawEJlSjUTwR60RSU-Yduw3hWD-Mqe6XRr4AtsmMZC3-bxIcTLVENszVY1OOX_MojHkUCG5Te6381-UYvAguThrbDPL7KgMPehm9eOo4aonbv6MFbbzEjoziEc_2hY1OKWvLPR-9Yj8uqarIL-nPEA1FiEJ0rK8Bp-mfHD-x1qGK6tzt4olmqRNagqzqZXV185w">
+                </div>
+            </div>
+        </section>
+
+        <!-- Infinite Scrolling Specialties Marquee -->
+        <div class="relative w-full overflow-hidden bg-[#1c1b1b] py-6 border-y border-primary/20 z-30">
+            <div class="flex w-[200%]">
+                <div class="animate-marquee flex items-center justify-around w-1/2 text-inverse-primary font-label-caps text-xs sm:text-sm tracking-widest uppercase py-1">
+                    <span>Tribunal do Júri</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Defesa Criminal</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Direito Civil</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Divórcio</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Atendimento Humanizado</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Segurança Jurídica</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Excelência e Resultados</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                </div>
+                <div class="animate-marquee flex items-center justify-around w-1/2 text-inverse-primary font-label-caps text-xs sm:text-sm tracking-widest uppercase py-1" aria-hidden="true">
+                    <span>Tribunal do Júri</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Defesa Criminal</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Direito Civil</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Divórcio</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Atendimento Humanizado</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Segurança Jurídica</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span>Excelência e Resultados</span>
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise Section -->
+        <section class="py-section-gap px-6 md:px-margin-page max-w-7xl mx-auto border-x border-outline-variant/20" id="specialties">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-4 uppercase tracking-tighter">Áreas de Atuação</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Especialização técnica de ponta e defesa intransigente em litígios complexos.</p>
+                </div>
+                <div class="h-[1px] flex-grow bg-primary/20 hidden md:block mx-12"></div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-primary text-3xl">gavel</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="group p-10 bg-white/40 backdrop-blur-sm border border-outline-variant/30 hover:border-primary transition-all duration-500 relative flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <span class="font-label-caps text-label-caps text-primary/50 mb-8 block">01</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Tribunal do Júri</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+                            Defesa altamente especializada em plenário, com sustentação oral persuasiva e técnicas inovadoras para crimes dolosos contra a vida.
+                        </p>
+                    </div>
+                    <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group p-10 bg-white/40 backdrop-blur-sm border border-outline-variant/30 hover:border-primary transition-all duration-500 relative flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <span class="font-label-caps text-label-caps text-primary/50 mb-8 block">02</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Direito Criminal</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+                            Atuação cirúrgica em investigações preliminares, audiências de custódia, ações penais, recursos e impetração de Habeas Corpus.
+                        </p>
+                    </div>
+                    <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="group p-10 bg-white/40 backdrop-blur-sm border border-outline-variant/30 hover:border-primary transition-all duration-500 relative flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <span class="font-label-caps text-label-caps text-primary/50 mb-8 block">03</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Direito Civil (Cível)</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+                            Gestão estratégica de contratos, proteção de direitos patrimoniais, cobranças, execuções e ações indenizatórias de alta complexidade.
+                        </p>
+                    </div>
+                    <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="group p-10 bg-white/40 backdrop-blur-sm border border-outline-variant/30 hover:border-primary transition-all duration-500 relative flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <span class="font-label-caps text-label-caps text-primary/50 mb-8 block">04</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Divórcio e Família</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+                            Suporte humanizado e seguro em divórcios consensuais e litigiosos, partilhas de bens, pensão alimentícia, guarda e inventários.
+                        </p>
+                    </div>
+                    <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-section-gap px-6 md:px-margin-page bg-surface-container-low/50 border-y border-outline-variant/20">
+            <div class="max-w-container-max mx-auto text-center">
+                <div class="w-16 h-16 bg-primary/10 flex items-center justify-center rounded-full mx-auto mb-8 border border-primary/20">
+                    <span class="material-symbols-outlined text-primary">verified_user</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Pronta para Defender seus Interesses</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Agende uma consulta estratégica e descubra como nossa expertise de ponta pode transformar e proteger seu cenário jurídico atual.
+                </p>
+                <a href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-primary text-on-primary font-label-caps text-label-caps px-12 py-5 uppercase tracking-widest hover:bg-primary-container transition-all duration-300 shadow-lg inline-block text-center">
+                    Iniciar Consultoria
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest/90 border-t border-outline-variant w-full">
+        <div class="flex flex-col items-center justify-center gap-6 px-margin-page py-12 border-x border-outline-variant/20 max-w-7xl mx-auto">
+            <div class="flex flex-col items-center gap-2">
+                <img alt="Logo Joanicy Lopes" class="h-14 w-auto mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKMvN-3XowTWQ-O_PqaoVC5wTxCLN64469zIPxukaW5_mAnn6jaNuFCKQwKl_EOj-5TflFt2JysEybPgQiJ2_zdMvKp_3eqKgY1lUps7Ip24hMsOiJkIqePUw_AeMN6tZPnsD2rCqvbUBwholXmUGYQQMmTEZMhg87BtJ8w2LaBVZSuw6CMRfNFSlWYtmAh7yDBcB497dDp4DlfLpXEieCm4VnUpVyEdBv916lqhvE-XUmLc504k7CG7PDzx7Aa04h0Z97lAaAhV8">
+                <div class="font-display-lg text-headline-md text-primary tracking-wider">Joanicy Lopes</div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#specialties">Especialidades</a>
+                <a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#office">O Escritório</a>
+                <a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#team">Equipe</a>
+                <a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#contact">Contato</a>
+            </div>
+
+            <!-- Social Media Icon (Instagram) -->
+            <div class="flex items-center justify-center mt-2">
+                <a class="text-on-surface-variant hover:text-primary transition-all duration-300 p-3 border border-outline-variant/30 rounded-full hover:border-primary hover:scale-110" href="https://www.instagram.com/joanicylopes.advogada/" target="_blank" aria-label="Instagram">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <p class="font-body-md text-body-md text-on-surface-variant text-center">
+                © 2026 Joanicy Lopes Advocacia. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- BottomNavBar (Floating WhatsApp FAB) -->
+    <div class="fixed bottom-8 right-8 z-[110]">
+        <a class="bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white px-6 py-4 rounded-full flex items-center gap-3 shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 animate-pulse-whatsapp group border border-white/20" href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+            <!-- WhatsApp SVG Icon -->
+            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.731-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.29 1.975 13.82 1.024 11.999 1.024c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.453 3.39 1.31 4.88L2.43 21.68l6.217-1.626c-.001.001-.001.001 0 0zM17.51 14.88c-.29-.145-1.71-.845-1.975-.94-.266-.096-.46-.145-.652.146-.19.29-.738.94-.905 1.133-.166.195-.333.22-.622.074-.29-.145-1.22-.45-2.325-1.434-.86-.767-1.44-1.715-1.61-2.004-.17-.29-.018-.447.127-.59.13-.13.29-.34.435-.508.145-.17.193-.29.29-.483.097-.19.047-.36-.024-.506-.07-.145-.652-1.573-.893-2.155-.236-.57-.496-.49-.652-.497-.154-.008-.333-.008-.513-.008-.18 0-.472.068-.72.34-.248.271-.947.926-.947 2.259 0 1.332.969 2.616 1.104 2.8.136.182 1.905 2.91 4.616 4.08.645.278 1.148.445 1.54.57.647.206 1.236.177 1.702.107.518-.077 1.71-.698 1.95-1.373.24-.675.24-1.253.167-1.373-.072-.12-.266-.195-.556-.34z"/>
+            </svg>
+            <span class="font-label-caps text-label-caps uppercase tracking-widest font-bold text-xs sm:text-sm">Agendar pelo WhatsApp</span>
+        </a>
+    </div>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
