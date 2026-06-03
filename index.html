@@ -145,19 +145,28 @@
         /* Infinite Scrolling Marquee */
         @keyframes marquee {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(-100%); }
         }
         .animate-marquee {
-            animation: marquee 25s linear infinite;
+            animation: marquee 30s linear infinite;
         }
 
         /* Pulse Animation for WhatsApp floating button */
         @keyframes pulse-whatsapp {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
             50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
         }
         .animate-pulse-whatsapp {
             animation: pulse-whatsapp 2s infinite;
+        }
+
+        /* Typewriter blinking cursor */
+        #typewriter-cursor {
+            animation: cursor-blink 0.8s step-end infinite;
+        }
+        @keyframes cursor-blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #775a19; }
         }
     </style>
 </head>
@@ -170,7 +179,7 @@
     <header class="bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 fixed top-0 w-full z-50">
         <div class="flex justify-between items-center px-margin-page py-4 w-full border-x border-outline-variant/20 max-w-7xl mx-auto">
             <div class="flex items-center gap-3">
-                <img alt="Logo Joanicy Lopes" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKMvN-3XowTWQ-O_PqaoVC5wTxCLN64469zIPxukaW5_mAnn6jaNuFCKQwKl_EOj-5TflFt2JysEybPgQiJ2_zdMvKp_3eqKgY1lUps7Ip24hMsOiJkIqePUw_AeMN6tZPnsD2rCqvbUBwholXmUGYQQMmTEZMhg87BtJ8w2LaBVZSuw6CMRfNFSlWYtmAh7yDBcB497dDp4DlfLpXEieCm4VnUpVyEdBv916lqhvE-XUmLc504k7CG7PDzx7Aa04h0Z97lAaAhV8">
+                <img alt="Logo Joanicy Lopes" class="h-16 w-auto object-contain" src="assets/Logo - Joanicy Lopes.png">
                 <span class="font-display-lg text-headline-md text-primary tracking-widest uppercase hidden md:block">Joanicy Lopes</span>
             </div>
             <nav class="hidden md:flex items-center gap-8">
@@ -198,7 +207,7 @@
                     <div class="inline-block px-4 py-1 border-l-2 border-primary mb-6">
                         <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Joanicy Lopes Advocacia</span>
                     </div>
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                    <h1 id="hero-title" class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight min-h-[144px] md:min-h-[216px]" style="opacity: 0;">
                         Advocacia de <span class="italic text-metallic-gold">Excelência</span> e Resultados
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
@@ -221,39 +230,37 @@
         </section>
 
         <!-- Infinite Scrolling Specialties Marquee -->
-        <div class="relative w-full overflow-hidden bg-[#1c1b1b] py-6 border-y border-primary/20 z-30">
-            <div class="flex w-[200%]">
-                <div class="animate-marquee flex items-center justify-around w-1/2 text-inverse-primary font-label-caps text-xs sm:text-sm tracking-widest uppercase py-1">
+        <div class="relative w-full overflow-hidden bg-gradient-to-r from-[#d4af37] via-[#e9c176] to-[#b8860b] py-5 border-y border-[#775a19]/20 z-30">
+            <div class="flex w-max">
+                <div class="animate-marquee flex items-center gap-12 pr-12 text-[#261900] font-label-caps text-xs sm:text-sm tracking-widest uppercase flex-shrink-0 font-semibold">
                     <span>Tribunal do Júri</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Defesa Criminal</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Direito Civil</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Divórcio</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Atendimento Humanizado</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Segurança Jurídica</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Excelência e Resultados</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
                 </div>
-                <div class="animate-marquee flex items-center justify-around w-1/2 text-inverse-primary font-label-caps text-xs sm:text-sm tracking-widest uppercase py-1" aria-hidden="true">
+                <div class="animate-marquee flex items-center gap-12 pr-12 text-[#261900] font-label-caps text-xs sm:text-sm tracking-widest uppercase flex-shrink-0 font-semibold" aria-hidden="true">
                     <span>Tribunal do Júri</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Defesa Criminal</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Direito Civil</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Divórcio</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Atendimento Humanizado</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Segurança Jurídica</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
+                    <span class="w-1.5 h-1.5 bg-[#261900] rounded-full"></span>
                     <span>Excelência e Resultados</span>
-                    <span class="w-1.5 h-1.5 bg-primary rounded-full mx-4"></span>
                 </div>
             </div>
         </div>
@@ -347,7 +354,7 @@
     <footer class="bg-surface-container-lowest/90 border-t border-outline-variant w-full">
         <div class="flex flex-col items-center justify-center gap-6 px-margin-page py-12 border-x border-outline-variant/20 max-w-7xl mx-auto">
             <div class="flex flex-col items-center gap-2">
-                <img alt="Logo Joanicy Lopes" class="h-14 w-auto mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKMvN-3XowTWQ-O_PqaoVC5wTxCLN64469zIPxukaW5_mAnn6jaNuFCKQwKl_EOj-5TflFt2JysEybPgQiJ2_zdMvKp_3eqKgY1lUps7Ip24hMsOiJkIqePUw_AeMN6tZPnsD2rCqvbUBwholXmUGYQQMmTEZMhg87BtJ8w2LaBVZSuw6CMRfNFSlWYtmAh7yDBcB497dDp4DlfLpXEieCm4VnUpVyEdBv916lqhvE-XUmLc504k7CG7PDzx7Aa04h0Z97lAaAhV8">
+                <img alt="Logo Joanicy Lopes" class="h-20 w-auto object-contain mb-2" src="assets/Logo - Joanicy Lopes.png">
                 <div class="font-display-lg text-headline-md text-primary tracking-wider">Joanicy Lopes</div>
             </div>
             
@@ -374,13 +381,12 @@
     </footer>
 
     <!-- BottomNavBar (Floating WhatsApp FAB) -->
-    <div class="fixed bottom-8 right-8 z-[110]">
-        <a class="bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white px-6 py-4 rounded-full flex items-center gap-3 shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 animate-pulse-whatsapp group border border-white/20" href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+    <div class="fixed bottom-6 right-6 z-[110]">
+        <a class="bg-[#25D366] text-white p-4 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 animate-pulse-whatsapp border border-white/20" href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" aria-label="WhatsApp">
             <!-- WhatsApp SVG Icon -->
-            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-8 h-8 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.731-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.29 1.975 13.82 1.024 11.999 1.024c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.453 3.39 1.31 4.88L2.43 21.68l6.217-1.626c-.001.001-.001.001 0 0zM17.51 14.88c-.29-.145-1.71-.845-1.975-.94-.266-.096-.46-.145-.652.146-.19.29-.738.94-.905 1.133-.166.195-.333.22-.622.074-.29-.145-1.22-.45-2.325-1.434-.86-.767-1.44-1.715-1.61-2.004-.17-.29-.018-.447.127-.59.13-.13.29-.34.435-.508.145-.17.193-.29.29-.483.097-.19.047-.36-.024-.506-.07-.145-.652-1.573-.893-2.155-.236-.57-.496-.49-.652-.497-.154-.008-.333-.008-.513-.008-.18 0-.472.068-.72.34-.248.271-.947.926-.947 2.259 0 1.332.969 2.616 1.104 2.8.136.182 1.905 2.91 4.616 4.08.645.278 1.148.445 1.54.57.647.206 1.236.177 1.702.107.518-.077 1.71-.698 1.95-1.373.24-.675.24-1.253.167-1.373-.072-.12-.266-.195-.556-.34z"/>
             </svg>
-            <span class="font-label-caps text-label-caps uppercase tracking-widest font-bold text-xs sm:text-sm">Agendar pelo WhatsApp</span>
         </a>
     </div>
 
@@ -396,6 +402,62 @@
                     });
                 }
             });
+        });
+
+        // Typewriter Effect for Hero Title
+        document.addEventListener("DOMContentLoaded", () => {
+            const heroTitle = document.getElementById("hero-title");
+            if (!heroTitle) return;
+
+            const originalHTML = `Advocacia de <span class="italic text-metallic-gold font-display-lg-mobile md:font-display-lg">Excelência</span> e Resultados`;
+            heroTitle.innerHTML = "";
+            heroTitle.style.opacity = "1";
+            
+            // Parse HTML content into char and tag list
+            const tokens = [];
+            let i = 0;
+            while (i < originalHTML.length) {
+                if (originalHTML[i] === "<") {
+                    let tag = "";
+                    while (i < originalHTML.length && originalHTML[i] !== ">") {
+                        tag += originalHTML[i];
+                        i++;
+                    }
+                    tag += ">";
+                    i++;
+                    tokens.push({ type: "tag", content: tag });
+                } else {
+                    tokens.push({ type: "char", content: originalHTML[i] });
+                    i++;
+                }
+            }
+
+            let currentIndex = 0;
+            let currentHTML = "";
+
+            const type = () => {
+                if (currentIndex < tokens.length) {
+                    const token = tokens[currentIndex];
+                    currentHTML += token.content;
+                    
+                    // Render typing characters and tag structure
+                    heroTitle.innerHTML = currentHTML + '<span id="typewriter-cursor" class="border-r-2 border-primary ml-1 inline-block h-8 md:h-12 align-middle">&nbsp;</span>';
+                    currentIndex++;
+                    
+                    // Typing speed logic
+                    const delay = token.type === "char" ? (token.content === " " ? 100 : 50) : 0;
+                    setTimeout(type, delay);
+                } else {
+                    // Remove cursor once finished
+                    const cursor = document.getElementById("typewriter-cursor");
+                    if (cursor) {
+                        cursor.style.animation = "none";
+                        cursor.remove();
+                    }
+                }
+            };
+
+            setTimeout(type, 800); // Initial delay before typing starts
         });
     </script>
 </body>
