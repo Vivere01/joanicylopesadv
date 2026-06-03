@@ -177,10 +177,10 @@
 
     <!-- TopNavBar -->
     <header class="bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 fixed top-0 w-full z-50">
-        <div class="flex justify-between items-center px-margin-page py-4 w-full border-x border-outline-variant/20 max-w-7xl mx-auto">
-            <div class="flex items-center gap-3">
-                <img alt="Logo Joanicy Lopes" class="h-16 w-auto object-contain" src="assets/Logo - Joanicy Lopes.png">
-                <span class="font-display-lg text-headline-md text-primary tracking-widest uppercase hidden md:block">Joanicy Lopes</span>
+        <div class="flex justify-between items-center px-4 sm:px-6 md:px-margin-page py-4 w-full border-x border-outline-variant/20 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2 sm:gap-3">
+                <img alt="Logo Joanicy Lopes" class="h-10 sm:h-12 md:h-16 w-auto object-contain" src="assets/Logo - Joanicy Lopes.png">
+                <span class="font-display-lg text-sm sm:text-lg md:text-headline-md text-primary tracking-widest uppercase block whitespace-nowrap">Joanicy Lopes</span>
             </div>
             <nav class="hidden md:flex items-center gap-8">
                 <a class="text-on-surface-variant hover:text-primary font-label-caps text-label-caps transition-colors duration-300" href="#specialties">Especialidades</a>
@@ -188,7 +188,7 @@
                 <a class="text-on-surface-variant hover:text-primary font-label-caps text-label-caps transition-colors duration-300" href="#team">Equipe</a>
                 <a class="text-on-surface-variant hover:text-primary font-label-caps text-label-caps transition-colors duration-300" href="#contact">Contato</a>
             </nav>
-            <a href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-none hover:bg-primary-container transition-all duration-300 active:scale-95 uppercase tracking-widest text-center">
+            <a href="https://wa.me/5591984851812?text=Olá%20Dra.%20Joanicy%20Lopes,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-primary text-on-primary font-label-caps text-[10px] sm:text-xs md:text-label-caps px-4 sm:px-6 py-2 sm:py-2.5 rounded-none hover:bg-primary-container transition-all duration-300 active:scale-95 uppercase tracking-widest text-center whitespace-nowrap">
                 Agendar Consulta
             </a>
         </div>
@@ -207,7 +207,7 @@
                     <div class="inline-block px-4 py-1 border-l-2 border-primary mb-6">
                         <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Joanicy Lopes Advocacia</span>
                     </div>
-                    <h1 id="hero-title" class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight min-h-[144px] md:min-h-[216px]" style="opacity: 0;">
+                    <h1 id="hero-title" class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight min-h-[96px] sm:min-h-[128px] md:min-h-[216px]" style="opacity: 0;">
                         Advocacia de <span class="italic text-metallic-gold">Excelência</span> e Resultados
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
@@ -352,7 +352,7 @@
 
     <!-- Footer -->
     <footer class="bg-surface-container-lowest/90 border-t border-outline-variant w-full">
-        <div class="flex flex-col items-center justify-center gap-6 px-margin-page py-12 border-x border-outline-variant/20 max-w-7xl mx-auto">
+        <div class="flex flex-col items-center justify-center gap-6 px-4 sm:px-6 md:px-margin-page py-12 border-x border-outline-variant/20 max-w-7xl mx-auto">
             <div class="flex flex-col items-center gap-2">
                 <img alt="Logo Joanicy Lopes" class="h-20 w-auto object-contain mb-2" src="assets/Logo - Joanicy Lopes.png">
                 <div class="font-display-lg text-headline-md text-primary tracking-wider">Joanicy Lopes</div>
@@ -365,8 +365,22 @@
                 <a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#contact">Contato</a>
             </div>
 
+            <!-- Contact Details: Address & Email -->
+            <div class="flex flex-col items-center gap-3 text-center my-4 font-body-md text-on-surface-variant text-sm sm:text-base max-w-xl border-t border-outline-variant/20 pt-6 w-full">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                        <span class="text-left sm:text-center">R. We-2, 301 - b - Marambaia, Belém - PA, 66623-282, Brasil</span>
+                    </div>
+                </div>
+                <a href="mailto:joanicylopes.advocacia@gmail.com" class="flex items-center justify-center gap-2 hover:text-primary transition-colors mt-2">
+                    <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                    <span>joanicylopes.advocacia@gmail.com</span>
+                </a>
+            </div>
+
             <!-- Social Media Icon (Instagram) -->
-            <div class="flex items-center justify-center mt-2">
+            <div class="flex items-center justify-center">
                 <a class="text-on-surface-variant hover:text-primary transition-all duration-300 p-3 border border-outline-variant/30 rounded-full hover:border-primary hover:scale-110" href="https://www.instagram.com/joanicylopes.advogada/" target="_blank" aria-label="Instagram">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
